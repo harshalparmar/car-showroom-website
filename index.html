@@ -13,6 +13,7 @@
     <meta property="og:image" content="https://newcss.net/_assets/og.png">
     <link rel="stylesheet" href="new.css">
 </head>
+
 <body>
     <header>
         <h1>CARWALE</h1>
@@ -24,213 +25,109 @@
         </nav>
     </header>
     
-    <img src="car1.webp" alt="car">
+    <div class="slideshow-container">
 
-    <p>
-        <label>FIND THE RIGHT CAR</label><br>
-        <input type="text" name="first_name">
-    </p>
-    
-    <h1>Heading 1</h1>
-    <p>This is paragraph text. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    <h2>Heading 2</h2>
-    <p>This is paragraph text. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    <h3>Heading 3</h3>
-    <p>This is paragraph text. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    <h4>Heading 4</h4>
-    <p>This is paragraph text. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    <h5>Heading 5</h5>
-    <p>This is paragraph text. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    <h6>Heading 6</h6>
-    <p>This is paragraph text. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="1.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="2.jpg"style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="3.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+        
+        </div>
+        
+        <div style="text-align:center">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+        
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 4000);
+        }
+        </script>
 
+
+    <p>Part of Car Trade Tech, CarWale's mission is to bring delight in car buying, we offer a bouquet of reliable tools and services to help car consumers decide on buying the right car, at the right price and from the right partner.</p>
+    <br>
+    <br>
+
+    <center>
+        <h4>Tata Altroz</h4>
+    </center>
+    <br>
+    <a href="tata-altroz/index.html"><img src="tata-altroz/1.jpg" width="500" alt="car" class="center"></a>
     <br>
     <hr>
+
+    <center>
+         <h4>Tata Harrier</h4>
+    </center>
     <br>
-
-    <a href="tata-nexon-ev-max/index.html">Home</a>
-
-    <p>
-        Lorem <mark>ipsum</mark> dolor sit amet <strong>consectetur</strong> adipisicing elit. Aut <i>harum
-            molestias</i> labore amet
-        possimus <s>exercitationem aperiam</s> earum, doloribus <u>nobis ducimus</u> maiores quia voluptates quis omnis
-        molestiae quisquam. <a href="#">Voluptatibus, officiis laudantium?</a>
-    </p>
-
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <code>Hic culpa, nobis doloremque</code> veniam non,
-        nihil
-        cupiditate odit repellat est <kbd>ALT + F4</kbd> expedita facilis. Fuga aspernatur, alias debitis eveniet totam
-        minima vel.
-    </p>
-
-    <ul>
-        <li>List item</li>
-        <li>List item</li>
-        <li>List item</li>
-        <li>List item</li>
-    </ul>
-
-    <ol>
-        <li>Step 1</li>
-        <li>Step 2</li>
-        <li>????</li>
-        <li>PROFIT!!!</li>
-    </ol>
-
-    <dl>
-        <dt>Web</dt>
-        <dd>The part of the Internet that contains websites and web pages</dd>
-        <dt>HTML</dt>
-        <dd>A markup language for creating web pages</dd>
-        <dt>CSS</dt>
-        <dd>A technology to make HTML look better</dd>
-    </dl>
-
-    <blockquote cite="https://en.wikiquote.org/wiki/Edward_Snowden">
-        If you think privacy is unimportant for you because you have nothing to hide, you might as well say free speech
-        is unimportant for you because you have nothing useful to say.<br><br>– Edward Snowden
-    </blockquote>
-
-    <pre>
-&#x3C;!DOCTYPE html&#x3E;
-&#x3C;html&#x3E;
-    &#x3C;head&#x3E;
-    &#x3C;title&#x3E;Hello World&#x3C;/title&#x3E;
-    &#x3C;/head&#x3E;
-    &#x3C;body&#x3E;
-    &#x3C;p&#x3E;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&#x3C;/p&#x3E;
-    &#x3C;/body&#x3E;
-&#x3C;/html&#x3E;</pre>
-
-<pre>
-    <img src="car1.webp" width="650" alt="Mt. Fuji">
-</pre>
-
+    <a href="tata-harrier/index.html"><img src="tata-harrier/1.jpg" width="500" alt="car" class="center"></a>
     <br>
     <hr>
+
+    <center>
+        <h4>Tata Nexon EV</h4>
+    </center>
     <br>
-
-    <table>
-        <caption>Ho-kago Tea Time</caption>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Instrument</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Yui Hirasawa</td>
-                <td>Lead Guitar</td>
-            </tr>
-            <tr>
-                <td>Mio Akiyama</td>
-                <td>Bass</td>
-            </tr>
-            <tr>
-                <td>Ritsu Tainaka</td>
-                <td>Drums</td>
-            </tr>
-            <tr>
-                <td>Tsumugi Kotobuki</td>
-                <td>Keyboard</td>
-            </tr>
-            <tr>
-                <td>Azusa Nakano</td>
-                <td>Rhythm Guitar</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <th>Name</th>
-                <th>Instrument</th>
-            </tr>
-        </tfoot>
-    </table>
-
+    <a href="tata-nexon-ev/index.html"><img src="tata-nexon-ev/1.jpg" width="500" alt="car" class="center"></a>
     <br>
     <hr>
+
+    <center>
+        <h4>Tata Nexon EV MAX</h4>
+    </center>
     <br>
-
-    <form>
-        <p><em>This is not a real form and does not submit or save any information.</em></p>
-        <p>
-            <label>First name</label><br>
-            <input type="text" name="first_name">
-        </p>
-        <p>
-            <label>Last name</label><br>
-            <input type="text" name="last_name">
-        </p>
-        <p>
-            <label>Gender</label><br>
-            <label>
-                <input type="radio" name="gender" value="Male">
-                Male
-            </label>
-            <br>
-            <label>
-                <input type="radio" name="gender" value="Female">
-                Female
-            </label>
-            <br>
-            <label>
-                <input type="radio" name="gender" value="other-none-na">
-                Non-binary
-            </label>
-        </p>
-        <p>
-            <label>Email</label><br>
-            <input type="email" name="email" required="">
-        </p>
-        <p>
-            <label>Phone number</label><br>
-            <input type="tel" name="phone">
-        </p>
-        <p>
-            <label>Password</label><br>
-            <input type="password" name="password">
-        </p>
-        <p>
-            <label>Country</label><br>
-            <select>
-                <option>China</option>
-                <option>India</option>
-                <option>United States</option>
-                <option>Indonesia</option>
-                <option>Brazil</option>
-            </select>
-        </p>
-        <p>
-            <label>Comments</label><br>
-            <textarea></textarea>
-        </p>
-        <p>
-            <label>
-                <input type="checkbox" value="terms">
-                I agree to the <a>terms and conditions</a>
-            </label>
-        </p>
-        <p>
-            <button>Sign up</button>
-            <button type="reset">Reset form</button>
-            <button disabled="disabled">Disabled</button>
-        </p>
-    </form>
-
+    <a href="tata-nexon-ev-max/index.html"><img src="tata-nexon-ev-max/1.jpg" width="500" alt="car" class="center"></a>
     <br>
     <hr>
+
+    <center>
+        <h4>Tata Punch</h4>
+    </center>
     <br>
+    <a href="tata-punch/index.html"><img src="tata-punch/1.jpg" width="500" alt="car" class="center"></a>
+    <br>
+    <hr>
 
-    <img src="https://elements.xz.style/assets/fuji-daniel-hehn.jpg" alt="car">
+    <center>
+        <h4>Tata Safari</h4>
+    </center>
+    <br>
+    <a href="tata-safari/index.html"><img src="tata-safari/1.jpg" width="500" alt="car" class="center"></a>
+    <br>
+    <hr>
 
-    <p>
-        Inline image: <a href="#"><img src="https://elements.xz.style/assets/fuji-daniel-hehn.jpg" width="50" alt="Mt. Fuji"></a>
-    </p>
-
-    <script async defer src="https://api.newcss.net/latest.js"></script>
-    <noscript><img src="https://api.newcss.net/noscript.gif" alt=""></noscript>
 </body>
 
 </html>
