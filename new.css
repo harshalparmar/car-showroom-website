@@ -2,7 +2,6 @@
 	--nc-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--nc-font-mono: Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
 
-	/* Light theme */
 	--nc-tx-1: #000000;
 	--nc-tx-2: #1A1A1A;
 	--nc-bg-1: #FFFFFF;
@@ -14,7 +13,6 @@
 	--nc-ac-1: #79FFE1;
 	--nc-ac-tx: #0C4047;
 
-	/* Dark theme */
 	--nc-d-tx-1: #ffffff;
 	--nc-d-tx-2: #eeeeee;
 	--nc-d-bg-1: #000000;
@@ -43,7 +41,6 @@
 }
 
 * {
-	/* Reset margins and padding */
 	margin: 0;
 	padding: 0;
 }
@@ -78,17 +75,14 @@ table,
 textarea,
 ul,
 video {
-	/* Margins for most elements */
 	margin-bottom: 1rem;
 }
 
 html,input,select,button {
-	/* Set body font family and some finicky elements */
 	font-family: var(--nc-font-sans);
 }
 
 body {
-	/* Center body in page */
 	margin: 0 auto;
 	max-width: 750px;
 	padding: 2rem;
@@ -98,14 +92,12 @@ body {
 	overflow-wrap: break-word;
 	background: var(--nc-bg-1);
 
-	/* Main body text */
 	color: var(--nc-tx-2);
 	font-size: 1.03rem;
 	line-height: 1.5;
 }
 
 ::selection {
-	/* Set background color for selected text */
 	background: var(--nc-ac-1);
 	color: var(--nc-ac-tx);
 }
@@ -164,7 +156,6 @@ a:hover {
 }
 
 abbr:hover {
-	/* Set the '?' cursor while hovering an abbreviation */
 	cursor: help;
 }
 
@@ -187,19 +178,7 @@ header {
 	background: var(--nc-bg-2);
 	border-bottom: 1px solid var(--nc-bg-3);
 	padding: 2rem 1.5rem;
-	
-	/* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
-
 	margin: -2rem calc(50% - 50vw) 2rem;
-
-	/* Shorthand for:
-
-	margin-top: -2rem;
-	margin-bottom: 2rem;
-
-	margin-left: calc(50% - 50vw);
-	margin-right: calc(50% - 50vw); */
-
 	padding-left: calc(50vw - 50%);
 	padding-right: calc(50vw - 50%);
 }
@@ -247,8 +226,6 @@ input[type="reset"][disabled],
 input[type="button"][disabled] {
 	cursor: default;
 	opacity: .5;
-
-	/* Set the [X] cursor while hovering a disabled link */
 	cursor: not-allowed;
 }
 
@@ -273,7 +250,6 @@ code,
 pre,
 kbd,
 samp {
-	/* Set the font family for monospaced elements */
 	font-family: var(--nc-font-mono);
 }
 
@@ -281,17 +257,14 @@ code,
 samp,
 kbd,
 pre {
-	/* The main preformatted style. This is changed slightly across different cases. */
 	background: var(--nc-bg-2);
 	border: 1px solid var(--nc-bg-3);
 	border-radius: 4px;
 	padding: 3px 6px;
-	/* ↓ font-size is relative to containing element, so it scales for titles*/
 	font-size: 0.9em;
 }
 
 kbd {
-	/* Makes the kbd element look like a keyboard key */
 	border-bottom: 3px solid var(--nc-bg-3);
 }
 
@@ -302,7 +275,6 @@ pre {
 }
 
 pre code {
-	/* When <code> is in a <pre>, reset it's formatting to blend in */
 	background: inherit;
 	font-size: inherit;
 	color: inherit;
@@ -312,7 +284,6 @@ pre code {
 }
 
 code pre {
-	/* When <pre> is in a <code>, reset it's formatting to blend in */
 	display: inline;
 	background: inherit;
 	font-size: inherit;
@@ -323,7 +294,6 @@ code pre {
 }
 
 details {
-	/* Make the <details> look more "clickable" */
 	padding: .6rem 1rem;
 	background: var(--nc-bg-2);
 	border: 1px solid var(--nc-bg-3);
@@ -331,23 +301,19 @@ details {
 }
 
 summary {
-	/* Makes the <summary> look more like a "clickable" link with the pointer cursor */
 	cursor: pointer;
 	font-weight: bold;
 }
 
 details[open] {
-	/* Adjust the <details> padding while open */
 	padding-bottom: .75rem;
 }
 
 details[open] summary {
-	/* Adjust the <details> padding while open */
 	margin-bottom: 6px;
 }
 
 details[open]>*:last-child {
-	/* Resets the bottom margin of the last element in the <details> while <details> is opened. This prevents double margins/paddings. */
 	margin-bottom: 0;
 }
 
@@ -356,12 +322,10 @@ dt {
 }
 
 dd::before {
-	/* Add an arrow to data table definitions */
 	content: '→ ';
 }
 
 hr {
-	/* Reset the border of the <hr> separator, then set a better line */
 	border: 0;
 	border-bottom: 1px solid var(--nc-bg-3);
 	margin: 1rem auto;
@@ -379,7 +343,6 @@ legend {
 }
 
 table {
-	/* border-collapse sets the table's elements to share borders, rather than floating as separate "boxes". */
 	border-collapse: collapse;
 	width: 100%
 }
@@ -396,7 +359,6 @@ th {
 }
 
 tr:nth-child(even) {
-	/* Set every other cell slightly darker. Improves readability. */
 	background: var(--nc-bg-2);
 }
 
@@ -406,13 +368,11 @@ table caption {
 }
 
 textarea {
-	/* Don't let the <textarea> extend off the screen naturally or when dragged by the user */
 	max-width: 100%;
 }
 
 ol,
 ul {
-	/* Replace the browser default padding */
 	padding-left: 2rem;
 }
 
@@ -455,14 +415,12 @@ body {font-family: Verdana, sans-serif;}
 .mySlides {display: none;}
 img {vertical-align: middle;}
 
-/* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
-/* Caption text */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -473,7 +431,6 @@ img {vertical-align: middle;}
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -482,7 +439,6 @@ img {vertical-align: middle;}
   top: 0;
 }
 
-/* The dots/bullets/indicators */
 .dot {
   height: 15px;
   width: 15px;
@@ -497,7 +453,6 @@ img {vertical-align: middle;}
   background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -508,7 +463,6 @@ img {vertical-align: middle;}
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
